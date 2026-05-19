@@ -1,5 +1,6 @@
 name: 'BridgedAI SBOM'
 description: 'Generate an SBOM using Syft (production) or a clearly marked mock SBOM (mock mode).'
+author: 'BridgedAI'
 branding:
   icon: 'book'
   color: 'purple'
