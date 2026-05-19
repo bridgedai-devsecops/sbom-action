@@ -12,8 +12,9 @@ inputs:
     description: 'oci | file (directory path) | npm | binary — Syft integration primarily supports directory and OCI.'
     required: true
   format:
-    description: 'spdx-json | cyclonedx-json'
-    required: true
+    description: 'spdx-json (default) | cyclonedx-json'
+    required: false
+    default: 'spdx-json'
   output-file:
     description: 'Where to write the SBOM JSON file.'
     required: true
@@ -23,6 +24,17 @@ inputs:
     default: 'production'
   fail-on-error:
     description: 'Fail the step if SBOM generation fails (production default true).'
+    required: false
+    default: 'true'
+  syft-path:
+    description: 'Optional path to an existing syft binary (skips auto-install).'
+    required: false
+  syft-version:
+    description: 'Syft release to install when missing (e.g. v1.19.0). Default v1.19.0.'
+    required: false
+    default: 'v1.19.0'
+  install-syft:
+    description: 'When true (default), download Syft if not on PATH.'
     required: false
     default: 'true'
 outputs:
