@@ -37,6 +37,13 @@ inputs:
     description: 'When true (default), download Syft if not on PATH.'
     required: false
     default: 'true'
+  organization-id:
+    description: 'BridgedAI organization id for signal envelopes (optional).'
+    required: false
+  emit-demo-signals:
+    description: 'When true, tag emitted signals with dataSource=demo. Use false for staging/production E2E.'
+    required: false
+    default: 'false'
 outputs:
   sbom-file:
     description: 'Path to SBOM file.'
